@@ -10,38 +10,100 @@
 
     <!--Estilos CSS -->
     <style>
-      .fondo{background-color: blue;}
-      .borde{border: 1px #000 solid;}
+      .slider{
+        background: url("images/mh.jpg");
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
     </style>
   </head>
   <body>
 
-    <h1>Hello, world!</h1> 
-    
-    <div class="container fondo">
-      <p>texto de ejemplo</p>
+    <section class="container-fluid slider d-flex justify-content-center align-items-center">
+      <h1 class="display-3 text-white">Bootstrap 4!</h1>  
+    </section>
+
+    <div id="app" class="navbar sticky-top navbar-toggleable-sm navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img src="images/icono.jpg" width="40" height="30" class="d-inline-block align-top" alt="Logo">
+        Regresiva
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link ocultarMenu" href="#"><button type="button" class="btn btn-warning active">Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ocultarMenu" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ocultarMenu" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item ocultarMenu" href="#">Action</a>
+              <a class="dropdown-item ocultarMenu" href="#">Another action</a>
+              <a class="dropdown-item ocultarMenu" href="#footer">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>  
     </div>
-    
     <div class="container">
-      <div class="row">
-        <div class="col-2 borde">1</div>
-        <div class="col-6 borde">2</div>
-        <div class="col-4 borde">3</div>
-      </div>
+      <p class="mt-5">La principal ventaja de las unidades absolutas es que su valor es directamente el valor que se debe utilizar, sin necesidad de realizar cálculos intermedios. Su principal desventaja es que son muy poco flexibles y no se adaptan fácilmente a los diferentes medios.
+
+De todas las unidades absolutas, la única que suele utilizarse es el punto (pt). Se trata de la unidad de medida preferida para establecer el tamaño del texto en los documentos que se van a imprimir, es decir, para el medio print de CSS, tal y como se verá más adelante.
+
+3.1.2. Unidades relativas
+
+La unidades relativas, a diferencia de las absolutas, no están completamente definidas, ya que su valor siempre está referenciado respecto a otro valor. A pesar de su aparente dificultad, son las más utilizadas en el diseño web por la flexibilidad con la que se adaptan a los diferentes medios.
+
+A continuación se muestran las tres unidades de medida relativas definidas por CSS y la referencia que toma cada una para determinar su valor real:
+
+em, (no confundir con la etiqueta <em> de HTML) relativa respecto del tamaño de letra del elemento.
+ex, relativa respecto de la altura de la letra x ("equis minúscula") del tipo y tamaño de letra del elemento.
+px, (píxel) relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza la página HTML.
+Las unidades em y ex no han sido creadas por CSS, sino que llevan décadas utilizándose en el campo de la tipografía. Aunque no es una definición exacta, la unidad 1em equivale a la anchura de la letra M ("eme mayúscula") del tipo y tamaño de letra del elemento.
+
+La unidad em hace referencia al tamaño en puntos de la letra que se está utilizando. Si se utiliza una tipografía de 12 puntos, 1em equivale a 12 puntos. El valor de 1ex se puede aproximar por 0.5 em.
+
+Si se considera el siguiente ejemplo:
+
+p { margin: 1em; }
+La regla CSS anterior indica que los párrafos deben mostrar un margen de anchura igual a 1em. Como se trata de una unidad de medida relativa, es necesario realizar un cálculo matemático para determinar la anchura real de ese margen.
+
+La unidad de medida em siempre hace referencia al tamaño de letra del elemento. Por otra parte, todos los navegadores muestran por defecto el texto de los párrafos con un tamaño de letra de 16 píxel. Por tanto, en este caso el margen de 1em equivale a un margen de anchura 16px.
+
+A continuación se modifica el ejemplo anterior para cambiar el tamaño de letra de los párrafos:</p>
     </div>
 
-    <hr>
+    <footer id="footer">
+      <h3 class="bg-primary text-white">&copy Laggia Corp </h3>
+    </footer>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-2 borde">1</div>
-        <div class="col-6 borde">2</div>
-        <div class="col-4 borde">3</div>
-      </div>
-    </div>
+
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--vue-->
+    <script src="https://unpkg.com/vue@2.3.4"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.ocultarMenu').click(function(){
+             $('button').trigger('click'); 
+          });
+        });
+    </script>
   </body>
 </html>
